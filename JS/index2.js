@@ -41,13 +41,13 @@ closeLetterBtn.addEventListener("click", (e) => {
 });
 // love album
 const images = [
-  "/Images/Love/hehe.gif",
-  "/Images/Love/hihi.gif",
-  "/Images/Love/layer 22.png ",
-  "/Images/Love/layer 21.png ",
-  "/Images/Love/layer 23.png ",
-  "/Images/Love/layer 24.png ",
-  "/Images/Love/ohno.png ",
+  "../Images/Love/hehe.gif",
+  "../Images/Love/hihi.gif",
+  "../Images/Love/layer 22.png ",
+  "../Images/Love/layer 21.png ",
+  "../Images/Love/layer 23.png ",
+  "../Images/Love/layer 24.png ",
+  "../Images/Love/ohno.png ",
 ];
 
 const content = document.getElementById("carouselContent");
@@ -79,14 +79,14 @@ function closeAlbum() {
 }
 //Boon album
 const boon = [
-  "/Images/Boon/5.png",
-  "/Images/Boon/1.png",
-  "/Images/Boon/6.jpg",
-  "/Images/Boon/4.png",
-  "/Images/Boon/111.png",
-  "/Images/Boon/9.gif",
-  "/Images/Boon/11.gif",
-  "/Images/Boon/12.gif",
+  "../Images/Boon/5.png",
+  "../Images/Boon/1.png",
+  "../Images/Boon/6.jpg",
+  "../Images/Boon/4.png",
+  "../Images/Boon/111.png",
+  "../Images/Boon/9.gif",
+  "../Images/Boon/11.gif",
+  "../Images/Boon/12.gif",
 ];
 
 const contentBoon = document.getElementById("carouselContentBoon");
