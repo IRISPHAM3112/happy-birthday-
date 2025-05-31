@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbie Room</title>
+    <link rel="stylesheet" href="/CSS/index-styles.css" />
+  </head>
+  <body>
+    <!-- Hình nềnnền -->
+
+    <div style="text-align: center" class="background">
+      <audio id="bgMusic" src="/music.mp3"></audio>
+      <!-- nền bắt đầu  -->
+      <div id="whiteOverlay">
+        <button id="startBtn">Mình bắt đầu nhé 💕</button>
+      </div>
+
+      <img src="/Images/room.png" alt="barbie room" />
+      <img src="/Images/bibble1.png" alt="bibble1" id="bibble" />
+      <div class="bibble-bubble-text">
+        <button class="chat-button" id="chatBtn" onclick="toggleDialogue()">
+          Click me!
+        </button>
+      </div>
+
+      <div class="bibble-text" id="bibbleBox" style="display: none">
+        <span class="arrow" onclick="prevLine()">&#8592;</span>
+        <span id="dialogue">Đây là câu thoại đầu tiên.</span>
+        <span class="arrow" id="nextArrow" onclick="nextLine()">&#8594;</span>
+        <span
+          class="close-btn"
+          id="closeBtn"
+          onclick="closeChatBibble()"
+          style="display: none"
+          >&#10005;</span
+        >
+      </div>
+
+      <div class="barbie" id="barbie" style="display: none">
+        <img src="/Images/SmilingBarbie.png" alt="barbiebarbie" id="barbie1" />
+        <img
+          src="/Images/barbie (2).png"
+          alt="barbie2"
+          id="barbie2"
+          style="display: none"
+        />
+      </div>
+      <div class="barbie-text" id="barbieBox" style="display: none">
+        <span id="barbieDialogue">Xin chào! Tôi là Barbie 💖</span>
+        <span class="arrow" onclick="nextBarbieLine()" id="barbieNext"
+          >&#8594;</span
+        >
+        <span
+          class="close-btn"
+          id="closeBtnBarbie"
+          onclick="closeChatBarbie()"
+          style="display: none"
+          >&#10005;</span
+        >
+      </div>
+
+      <!-- thư của tôi  -->
+      <button id="showLetterBtn">Love</button>
+      <div class="envelope-component" id="envelopeComponent">
+        
+        <div class="envelope-wrapper">
+          <div class="envelope">
+            <div class="letter">
+              <button id="closeLetterBtn" class="closeLetterbtn">&times;</button>  <!-- dấu nhân -->
+              <div class="text">
+                <strong>Dear Person.</strong>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  labore omnis minus maiores laboriosam, facere in beatae esse.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="heart"></div>
+        </div>
+      </div>
+    <!-- album ảnhảnh -->
+    <button onclick="openAlbum()" id="album">Album</button>
+
+    <!-- Album  -->
+    <div class="overlay" id="albumOverlay">
+      <div class="carousel-box">
+        <button class="close-btn" onclick="closeAlbum()">❌</button>
+        <div class="carousel-content" id="carouselContent"></div>
+      </div>
+    </div>
+
+    <!-- ảnh của BoonBoon -->
+    <button onclick="openBoon()" id="boon">Boon</button>
+    <div class="overlay" id="albumOverlayBoon">
+      <div class="carousel-box">
+        <button class="close-btn" onclick="closeAlbumBoon()">❌</button>
+        <div class="carousel-content" id="carouselContentBoon"></div>
+      </div>
+    </div>
+    <!-- thư của tôitôi -->
+
+    <script src="/JS/index.js"></script>
+  </body>
+</html>

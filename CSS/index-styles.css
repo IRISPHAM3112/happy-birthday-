@@ -1,0 +1,532 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Nền trắng tinhtinh */
+#whiteOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Images/background-heart.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#whiteOverlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#startBtn {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: white;
+  color: #ea5d77;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#startBtn:hover {
+  background-color: #9c405f;
+  color: white;
+}
+
+/* Khi nhấn xuống */
+#startBtn:active {
+  background-color: #9c405f; /* Bạn có thể đổi font khác ở đây */
+  transform: scale(0.95);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* #Bibblele */
+#bibble {
+  position: absolute;
+  right: 50%;
+  top: 75%;
+  width: 300px;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 170%; /* 1/3 tzừ dưới lên */
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.overlay-image {
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+.hover-zone {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.hover-zone:hover .overlay-image {
+  transform: scale(1.11);
+  filter: brightness(1.1);
+}
+.popup-box {
+  display: inline-block; /* Hidden by default */
+  position: relative;
+  z-index: 100;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+}
+.popup-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.close {
+  color: #888;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+.close:hover {
+  color: #000;
+}
+@media (max-width: 600px) {
+  .overlay-image {
+    max-width: 90%;
+  }
+}
+/* khung chat bibble  */
+.bibble-bubble-text {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+}
+.chat-button {
+  padding: 24px;
+  border-radius: 8px;
+  color: #ea5d77;
+  border: none;
+  font-weight: bold;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.bibble-text {
+  /* display: none; */
+  position: absolute;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 480px;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#dialogue {
+  color: #ea5d77;
+  font-weight: bold;
+}
+.arrow {
+  color: #ea5d77;
+}
+
+.close-btn {
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+  color: #ea5d77;
+  font-weight: bold;
+}
+/* barbie  */
+.barbie {
+  display: none;
+  z-index: 9999;
+  bottom: 0;
+  left: 0; /* để chắc chắn nó nằm trên */
+}
+.barbie img {
+  position: absolute;
+  top: 50vh;
+  left: 30%;
+  width: 600px;
+  height: auto;
+}
+.barbie-text {
+  display: none;
+  position: absolute;
+  background: #fff0f5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  bottom: 30%;
+  left: 63%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+#barbieDialogue {
+  color: #d63384;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* #Buttonxem ảnh  */
+/* button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#album {
+  position: absolute;
+  top: 100%;
+  left: 65%;
+} */
+#start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  padding: 35px 35px;
+  background-color: #ea5d77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* thư của tôi  */
+#showLetterBtn {
+  position: absolute;
+  right: 30%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: #ea5d77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.envelope-component {
+  --primary: #fff;
+  --bg-color: #fff0f0;
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #e6cfa7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #444;
+  --heart-color: #ea5d77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: absolute;
+  left: 30%;
+  bottom: 20%;
+  display: none;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  pointer-events: none;
+}
+#closeLetterBtn {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ea5d77;
+  padding: 0;
+  line-height: 1;
+}
+.envelope-component.show #closeLetterBtn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.envelope-component.flap #closeLetterBtn {
+  display: block;
+}
+.envelope-component.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.envelope::before,
+.envelope::after {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  position: relative;
+  width: 500px; /* tăng chiều rộng */
+  height: 380px;
+}
+
+.envelope-component .envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.envelope-component .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 220px solid var(--envelope-tab); /* tăng chiều cao tam giác */
+  border-right: 250px solid transparent; /* tăng theo width mới */
+  border-left: 250px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+
+.envelope-component .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 220px solid transparent; /* cập nhật theo ::before */
+  border-right: 250px solid var(--envelope-cover);
+  border-bottom: 160px solid var(--envelope-cover);
+  border-left: 250px solid var(--envelope-cover);
+}
+
+.envelope-component .envelope .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 80%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 30px 15px;
+}
+
+.envelope-component .envelope .letter .text {
+  font-family: "Gill Sans", Calibri, sans-serif;
+  color: var(--txt-color);
+  text-align: left;
+  font-size: 10px;
+}
+
+.envelope-component .heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+}
+
+.envelope-component .heart:before,
+.envelope-component .heart:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+
+.envelope-component .heart:before {
+  top: -12.5px;
+  left: 0;
+}
+
+.envelope-component .heart:after {
+  right: 12.5px;
+  top: 0;
+}
+
+.envelope-component.flap .envelope::before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.envelope-component.flap .envelope .letter {
+  bottom: 100px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+
+.envelope-component.flap .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+.letter {
+  position: relative;
+  padding: 20px 30px 20px 20px; /* thêm padding phải để khỏi đè lên nút đóng */
+  background: var(--primary, #fff);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* album ảnhảnh */
+
+#album {
+  position: absolute;
+  right: 58vh;
+  top: 75vh;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: #ea5d77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+#boon {
+  position: absolute;
+  right: 53vh;
+  top: 110vh;
+  transform: translate(-50%, -50%);
+  padding: 150px 80px;
+  background-color: #ea5d77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.carousel-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-content {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 60vh;
+}
+
+.carousel-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #ea5d77;
+  cursor: pointer;
+}
+/* đoạn text Bibble  */
+.bibble-text {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  font-size: 20px;
+  align-items: center;
+  z-index: 10; /* Đảm bảo nằm trên cùng */
+}
+#dialogue {
+  font-size: 24px;
+  margin: 20px;
+  min-height: 60px;
+}
+
+.arrow {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+
+/* thư tính mơr ra  */

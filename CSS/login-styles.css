@@ -1,0 +1,6 @@
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* khoảng cách giữa các nút */
+  padding: 60px;
+}
