@@ -21,7 +21,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/Images/background-heart.png");
+  background-image: url("../Images/background-heart.png");
   display: flex;
   justify-content: center;
   align-items: center;
