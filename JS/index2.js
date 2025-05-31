@@ -61,7 +61,7 @@ function openAlbum() {
       font-weight: bold;
       text-align: center;
       margin-bottom: 20px;
-      color: #ea5d77;
+      color: #99313a;
     `;
     content.appendChild(caption);
     images.forEach((src) => {
@@ -100,7 +100,7 @@ function openBoon() {
       font-weight: bold;
       text-align: center;
       margin-bottom: 20px;
-      color: #ea5d77;
+      color: #99313a;
     `;
     contentBoon.appendChild(caption);
     boon.forEach((src) => {
@@ -173,7 +173,7 @@ function closeChatBibble() {
 const barbieDialogues = [
   "Hi Nhi! I heard from Thuy that I'm your favourite Barbie 💖",
   "Happy 23rd birthday Nhi! Thank you for always staying true to who you are while still reaching for better. You’re brave, you’re full of love. You’d be a fantastic Barbie! I hope you truly feel how deeply I mean that",
-  "Hear this song? It's one of Thuy's fav songs of all time and ever since she heard it from you, its always been that way. She told me that song says exactly what she feels. If she could bottle the feeling you give her and shelves that stuff for years to come, she would do it",
+  "Hear this song? It's one of Thuy's fav songs of all time and ever since she heard it from you, its always been that way. She told me that song says exactly what she feels. If she could give you the universe, she would.",
   "Thank you for being such a loyal fan of mine for so long. I really appreciate it. I just want to wish you a happy birthday with fortune and success to come ur way, make sure to continue smiling! Youre deeply loved, never forget that",
   "There are few objects you can interact with around me, feel free to explore the rest of the room!",
 ];
