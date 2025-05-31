@@ -41,14 +41,12 @@ closeLetterBtn.addEventListener("click", (e) => {
 });
 // love album
 const images = [
+  "/Images/Love/hehe.gif",
+  "/Images/Love/hihi.gif",
   "/Images/Love/layer 22.png ",
   "/Images/Love/layer 21.png ",
   "/Images/Love/layer 23.png ",
   "/Images/Love/layer 24.png ",
-  "/Images/Love/layer 31.png ",
-  "/Images/Love/layer 32.png ",
-  "/Images/Love/layer 33.png ",
-  "/Images/Love/layer 34.png ",
   "/Images/Love/ohno.png ",
 ];
 
