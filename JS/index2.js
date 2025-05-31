@@ -43,10 +43,10 @@ closeLetterBtn.addEventListener("click", (e) => {
 const images = [
   "../Images/Love/hehe.gif",
   "../Images/Love/hihi.gif",
-  "../Images/Love/layer 22.png ",
-  "../Images/Love/layer 21.png ",
-  "../Images/Love/layer 23.png ",
-  "../Images/Love/layer 24.png ",
+  "../Images/Love/Layer 22.png ",
+  "../Images/Love/Layer 21.png ",
+  "../Images/Love/Layer 23.png ",
+  "../Images/Love/Layer 24.png ",
   "../Images/Love/ohno.png ",
 ];
 
