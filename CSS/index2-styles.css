@@ -273,14 +273,13 @@ body {
   --txt-color: #444;
   --heart-color: #ea5d77;
 
-  /* NỀN XÁM MỜ VÀ CĂN GIỮA */
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
-  display: flex;
+  display: flex; /* luôn giữ flex để căn giữa */
   justify-content: center;
   align-items: center;
 
@@ -289,14 +288,16 @@ body {
   opacity: 0;
   pointer-events: none;
   transform: translateY(50px);
-  transition: all 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
   z-index: 1000; /* đảm bảo nằm trên hết */
 }
+
 .envelope-component.show {
   opacity: 1;
-  transform: translateY(0);
   pointer-events: auto;
+  transform: translateY(0);
 }
+
 #closeLetterBtn {
   display: none;
   position: absolute;
