@@ -120,9 +120,11 @@ function closeAlbumBoon() {
 //Đoạn thoại của Bibble
 // Dialogues Bibble
 const dialogues = [
-  "Hello, you must be Nhi! I have heard so much about you from Thuy",
+  "Oh, HI THERE!",
+  "You must be Nhi! I have heard so much about you from Thuy",
   "First of all, HAPPY BIRTHDAY NHI!!!",
-  "Thuy talks about you all the time. She always tells me how wonderful you are and how grateful she is to have you in her life. She loves you deeply — in the kind of way that makes her feel like she's found someone truly special, someone she’ll always cherish.",
+  "She always tells me how sweet and precious you are. She loves you deeply — ",
+  "in the kind of way that makes her feel like she’s holding something tender and delicate, someone who nestles perfectly into a quiet, gentle corner of her heart.",
   "There’s someone special I’d love for you to meet! But before that, close your eyes, make a wish — and when you're ready, press the x button",
 ];
 let index = 0;
@@ -172,8 +174,8 @@ function closeChatBibble() {
 // Dialogues Barbie
 const barbieDialogues = [
   "Hi Nhi! I heard from Thuy that I'm your favourite Barbie 💖",
-  "Happy 23rd birthday Nhi! Thank you for always staying true to who you are while still reaching for better. You’re brave, you’re full of love. You’d be a fantastic Barbie! I hope you truly feel how deeply I mean that",
-  "Hear this song? It's one of Thuy's fav songs of all time and ever since she heard it from you, its always been that way. She told me that song says exactly what she feels. If she could give you the universe, she would.",
+  "Happy 23rd birthday Nhi! Thank you for always staying true to who you are while still reaching for better. You’re so brave. You’d be a fantastic Barbie! I hope you truly feel how deeply I mean that",
+  "Hear this song? It is one of Thuy's fav songs of all time and ever since she heard it from you, it is always been that way. She told me that song says exactly what she feels.",
   "Thank you for being such a loyal fan of mine for so long. I really appreciate it. I just want to wish you a happy birthday with fortune and success to come ur way, make sure to continue smiling! Youre deeply loved, never forget that",
   "There are few objects you can interact with around me, feel free to explore the rest of the room!",
 ];
