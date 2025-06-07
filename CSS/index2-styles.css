@@ -272,18 +272,30 @@ body {
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
   --heart-color: #ea5d77;
+
+  /* NỀN XÁM MỜ VÀ CĂN GIỮA */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 40px;
-  position: absolute;
-  left: 30%;
-  bottom: 20%;
-  display: none;
+
   opacity: 0;
+  pointer-events: none;
   transform: translateY(50px);
   transition: all 0.8s ease;
-  pointer-events: none;
+  z-index: 1000; /* đảm bảo nằm trên hết */
+}
+.envelope-component.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 #closeLetterBtn {
   display: none;
@@ -298,6 +310,7 @@ body {
   color: #ea5d77;
   padding: 0;
   line-height: 1;
+  z-index: 100;
 }
 .envelope-component.show #closeLetterBtn {
   opacity: 1;
@@ -415,7 +428,7 @@ body {
 }
 
 .envelope-component.flap .envelope .letter {
-  bottom: 100px;
+  bottom: 250px;
   transform: scale(1.5);
   transition-delay: 1s;
 }
