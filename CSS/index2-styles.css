@@ -60,6 +60,12 @@ body {
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* hoặc theo chiều rộng ảnh thực tế */
+  margin: 0 auto;
+}
 
 /* #Bibblele */
 #bibble {
@@ -273,7 +279,7 @@ body {
   --txt-color: #444;
   --heart-color: #ea5d77;
 
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
