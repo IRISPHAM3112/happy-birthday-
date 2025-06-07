@@ -338,6 +338,9 @@ body {
   width: 500px; /* tăng chiều rộng */
   height: 380px;
 }
+.envelope-component.flap .envelope-wrapper {
+  transform: translateY(80px); /* Dịch xuống khi thư mở */
+}
 
 .envelope-component .envelope {
   position: relative;
